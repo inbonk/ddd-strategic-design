@@ -1,9 +1,9 @@
 package camp.nextstep.edu.kitchenpos.bo;
 
+import camp.nextstep.edu.kitchenpos.dao.JdbcTemplateProductDao;
 import camp.nextstep.edu.kitchenpos.dao.MenuDao;
 import camp.nextstep.edu.kitchenpos.dao.MenuGroupDao;
 import camp.nextstep.edu.kitchenpos.dao.MenuProductDao;
-import camp.nextstep.edu.kitchenpos.dao.ProductDao;
 import camp.nextstep.edu.kitchenpos.model.Menu;
 import camp.nextstep.edu.kitchenpos.model.MenuProduct;
 import camp.nextstep.edu.kitchenpos.model.Product;
@@ -20,13 +20,13 @@ public class MenuBo {
     private final MenuDao menuDao;
     private final MenuGroupDao menuGroupDao;
     private final MenuProductDao menuProductDao;
-    private final ProductDao productDao;
+    private final JdbcTemplateProductDao productDao;
 
     public MenuBo(
             final MenuDao menuDao,
             final MenuGroupDao menuGroupDao,
             final MenuProductDao menuProductDao,
-            final ProductDao productDao
+            final JdbcTemplateProductDao productDao
     ) {
         this.menuDao = menuDao;
         this.menuGroupDao = menuGroupDao;
